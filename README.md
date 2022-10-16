@@ -84,6 +84,7 @@ class Person : HtmlObject
 ```
 
 ## Some notes:
+- Uses HtmlAgilityPack to parse Html behind the scenes.
 - Will work on Public and Private properties.
 - Will work whether or not the tag is deeply nested.
 - You don't need to specify every class the html property has, just enough to identify it.
