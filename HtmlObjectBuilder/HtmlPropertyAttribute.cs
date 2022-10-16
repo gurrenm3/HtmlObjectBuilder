@@ -13,6 +13,11 @@ namespace HtmlObjectBuilder
         /// </summary>
         public string[] Classes { get; set; }
 
+        public HtmlPropertyAttribute(string hasClass)
+        {
+            Classes = new string[] { hasClass };
+        }
+
         public HtmlPropertyAttribute(string[] classes)
         {
             Classes = classes;

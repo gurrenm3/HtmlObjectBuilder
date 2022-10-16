@@ -14,6 +14,24 @@ namespace HtmlObjectBuilder
     {
         private readonly HtmlNode _objectNode;
 
+        /// <summary>
+        /// Creates object from html.
+        /// </summary>
+        /// <param name="html"></param>
+        public HtmlObject(string html)
+        {
+            HtmlDocument document = new HtmlDocument();
+            document.LoadHtml(html);
+            _objectNode = document.DocumentNode;
+
+            var properties = GetHtmlProperties();
+            SetHtmlProperties(properties);
+        }
+
+        /// <summary>
+        /// Creates object from the provided HtmlNode.
+        /// </summary>
+        /// <param name="objectNode"></param>
         public HtmlObject(HtmlNode objectNode)
         {
             this._objectNode = objectNode;
